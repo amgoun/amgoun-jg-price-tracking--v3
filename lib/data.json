@@ -1,0 +1,264 @@
+{
+  "hero": {
+    "title": "Automated Price Monitoring That Saves You Time and Boosts Profits",
+    "description": "Effortlessly maximize profits and stay competitive with real-time pricing automation, smart adjustments, and detailed reports — seamlessly integrated with Shopify and available on our web app",
+    "ctaText": "Launch Web App",
+    "watchDemoText": "Install on Shopify",
+    "rating": {
+      "score": "4.9/5",
+      "text": "and loved by thousands of store owners"
+    }
+  },
+  "features": {
+    "label": "FEATURES",
+    "title": "Top Product Features",
+    "subtitle": "Discover standout features for enhanced performance. Streamline tasks, embrace innovation effortlessly.",
+    "items": [
+      {
+        "id": "pricing-trends",
+        "title": "Reveal Pricing Trends That Drive Strategy",
+        "description": "Uncover pricing trends to make smarter decisions over time.",
+        "icon": "trending-up",
+        "iconColor": "blue"
+      },
+      {
+        "id": "real-time-alerts",
+        "title": "Get Real-Time Pricing Alerts",
+        "description": "Never miss a pricing opportunity with real-time alerts.",
+        "icon": "bell",
+        "iconColor": "cyan"
+      },
+      {
+        "id": "match-prices",
+        "title": "Match Competitor Prices Instantly",
+        "description": "Instantly discover and match competitor prices to stay ahead.",
+        "icon": "zap",
+        "iconColor": "purple"
+      },
+      {
+        "id": "smart-automation",
+        "title": "Boost Margins with Smart Automation",
+        "description": "Boost margins with automated pricing that adapts to the market.",
+        "icon": "settings",
+        "iconColor": "green"
+      },
+      {
+        "id": "optimize-variants",
+        "title": "Optimize Variants to Win More Sales",
+        "description": "Win more sales by comparing and optimizing product variants.",
+        "icon": "bar-chart",
+        "iconColor": "orange"
+      },
+      {
+        "id": "price-reports",
+        "title": "Stay Informed with Price Change Reports",
+        "description": "Receive regular email summaries highlighting competitor price changes and market shifts.",
+        "icon": "mail",
+        "iconColor": "cyan"
+      }
+    ]
+  },
+  "testimonials": {
+    "label": "TESTIMONIALS",
+    "title": "Trusted by Leading Businesses",
+    "subtitle": "See what our customers have to say about their experience",
+    "testimonial": {
+      "rating": 5,
+      "quote": "Aimate has revolutionized our operations. The AI-driven support exceeds expectations, enhancing efficiency and satisfaction. A true game-changer, highly recommended for businesses.",
+      "author": {
+        "name": "John Doe",
+        "title": "Managing Director, Spherule",
+        "image": "/placeholder.svg?height=80&width=80"
+      }
+    },
+    "stats": [
+      {
+        "value": "87%",
+        "label": "Increase in customer satisfaction",
+        "trend": "up"
+      },
+      {
+        "value": "38%",
+        "label": "Increase in operational efficiency",
+        "trend": "up"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Companies around the world trust Pricefy, find the plan that best suits your needs.",
+    "plans": [
+      {
+        "name": "STARTER",
+        "price": "$0",
+        "period": "month",
+        "features": [
+          {
+            "icon": "lock",
+            "text": "5 watching products (SKUs)"
+          },
+          {
+            "icon": "eye",
+            "text": "1 watching competitor per each product"
+          },
+          {
+            "icon": "clock",
+            "text": "Update once every 24 hours"
+          }
+        ],
+        "ctaText": "Subscribe",
+        "highlighted": false
+      },
+      {
+        "name": "PROFESSIONAL",
+        "price": "$29.50",
+        "period": "month",
+        "features": [
+          {
+            "icon": "lock",
+            "text": "100 watching products (SKUs)"
+          },
+          {
+            "icon": "infinity",
+            "text": "Unlimited competitors"
+          },
+          {
+            "icon": "clock",
+            "text": "Update every 12 hours"
+          },
+          {
+            "icon": "mail",
+            "text": "E-mail reports (+Instant price alerts)"
+          },
+          {
+            "icon": "settings",
+            "text": "Repricing rules"
+          }
+        ],
+        "ctaText": "Subscribe",
+        "highlighted": false
+      },
+      {
+        "name": "BUSINESS",
+        "price": "$79.50",
+        "period": "month",
+        "badge": "Popular",
+        "features": [
+          {
+            "icon": "lock",
+            "text": "2000 watching products (SKUs)"
+          },
+          {
+            "icon": "infinity",
+            "text": "Unlimited competitors"
+          },
+          {
+            "icon": "clock",
+            "text": "Update every 6 hours"
+          },
+          {
+            "icon": "mail",
+            "text": "E-mail reports (+Instant price alerts)"
+          },
+          {
+            "icon": "settings",
+            "text": "Repricing rules"
+          },
+          {
+            "icon": "layers",
+            "text": "Variants"
+          }
+        ],
+        "ctaText": "Subscribe",
+        "highlighted": true
+      },
+      {
+        "name": "ENTERPRISE",
+        "price": "$249",
+        "period": "month",
+        "features": [
+          {
+            "icon": "lock",
+            "text": "8000 watching products (SKUs)"
+          },
+          {
+            "icon": "infinity",
+            "text": "Unlimited competitors"
+          },
+          {
+            "icon": "clock",
+            "text": "Update every 6 hours"
+          },
+          {
+            "icon": "mail",
+            "text": "E-mail reports (+Instant price alerts)"
+          },
+          {
+            "icon": "settings",
+            "text": "Repricing rules"
+          },
+          {
+            "icon": "layers",
+            "text": "Variants"
+          }
+        ],
+        "ctaText": "Subscribe",
+        "highlighted": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Optimize Your Pricing?",
+    "description": "Join hundreds of businesses already maximizing their profits with intelligent price tracking and automation.",
+    "buttonText": "Start Your Free Trial",
+    "disclaimer": "No credit card required"
+  },
+  "footer": {
+    "brand": {
+      "name": "GS Tracker",
+      "logo": "/placeholder.svg?height=40&width=40"
+    },
+    "newsletter": {
+      "title": "Subscribe",
+      "description": "Join our newsletter to stay up to date on new features and releases.",
+      "placeholder": "Enter your e-mail",
+      "buttonText": "Subscribe",
+      "disclaimer": "By subscribing you agree to our Privacy Policy"
+    },
+    "links": [
+      {
+        "title": "Features",
+        "items": [
+          { "label": "Price Monitoring", "href": "#" },
+          { "label": "Automated Pricing", "href": "#" },
+          { "label": "Competitor Analysis", "href": "#" },
+          { "label": "Real-time Alerts", "href": "#" }
+        ]
+      },
+      {
+        "title": "Resources",
+        "items": [
+          { "label": "Pricing Plans", "href": "#" },
+          { "label": "Customer Stories", "href": "#" },
+          { "label": "API Documentation", "href": "#" },
+          { "label": "Help Center", "href": "#" }
+        ]
+      },
+      {
+        "title": "Company",
+        "items": [
+          { "label": "About Us", "href": "#" },
+          { "label": "Contact", "href": "#" },
+          { "label": "Privacy Policy", "href": "#" },
+          { "label": "Terms of Service", "href": "#" }
+        ]
+      }
+    ],
+    "social": [
+      { "name": "Facebook", "icon": "facebook", "href": "#" },
+      { "name": "Twitter", "icon": "twitter", "href": "#" },
+      { "name": "Instagram", "icon": "instagram", "href": "#" }
+    ],
+    "copyright": "© 2025 GJ Tracker. All rights reserved."
+  }
+}

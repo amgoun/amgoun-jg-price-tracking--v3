@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+
+  --color-blacker: #030b15;
+  --color-whiter: #f4f4f4;
+  --color-bluewish: #00c4f4;
+  /* Semantic brand/surface tokens */
+  --color-surface-start: #0a1628;
+  --color-surface-end: #1a2942;
+  --color-features-end: #0f1c2e;
+  --color-page-bg: #0a0e1a;
+  --color-card-bg: #1a1f2e;
+  --color-card-hover-bg: #1f2433;
+}
+
+@theme inline {
+  --color-blacker: var(--color-blacker);
+  --color-whiter: var(--color-whiter);
+  --color-bluewish: var(--color-bluewish);
+  /* Expose semantic tokens to Tailwind */
+  --color-surface-start: var(--color-surface-start);
+  --color-surface-end: var(--color-surface-end);
+  --color-features-end: var(--color-features-end);
+  --color-page-bg: var(--color-page-bg);
+  --color-card-bg: var(--color-card-bg);
+  --color-card-hover-bg: var(--color-card-hover-bg);
+}

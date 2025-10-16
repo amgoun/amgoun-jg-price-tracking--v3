@@ -3,9 +3,9 @@
 
 :root {
 
-  --color-blacker: #030b15;
+  --color-blacker: #1d1d1d;
   --color-whiter: #f4f4f4;
-  --color-bluewish: #00c4f4;
+  --color-bluewish: #f47b5e;
   /* Semantic brand/surface tokens */
   --color-surface-start: #0a1628;
   --color-surface-end: #1a2942;

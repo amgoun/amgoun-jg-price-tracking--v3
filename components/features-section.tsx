@@ -1,23 +1,23 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
-import { useRef } from "react"
-import { TrendingUp, Bell, Zap, Settings, BarChart3, Mail } from "lucide-react"
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { TrendingUp, Bell, Zap, Settings, BarChart3, Mail } from "lucide-react";
 
 interface Feature {
-  id: string
-  title: string
-  description: string
-  icon: string
-  iconColor: string
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  iconColor: string;
 }
 
 interface FeaturesData {
-  label?: string
-  title: string
-  subtitle: string
-  items: Feature[]
+  label?: string;
+  title: string;
+  subtitle: string;
+  items: Feature[];
 }
 
 const iconMap = {
@@ -27,21 +27,22 @@ const iconMap = {
   settings: Settings,
   "bar-chart": BarChart3,
   mail: Mail,
-}
+};
 
 const colorMap = {
-  blue: "bg-blue-500/20 text-blue-400",
-  cyan: "bg-cyan-500/20 text-cyan-400",
-  purple: "bg-purple-500/20 text-purple-400",
-  green: "bg-green-500/20 text-green-400",
-  orange: "bg-orange-500/20 text-orange-400",
-}
+  blue: "bg-blue-400/20 text-blue-300",
+  cyan: "bg-cyan-400/20 text-cyan-300",
+  purple: "bg-violet-400/20 text-violet-300",
+  green: "bg-emerald-400/20 text-emerald-300",
+  orange: "bg-[#f47b5e]/20 text-[#f47b5e]",
+};
 
 function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-50px" })
-  const Icon = iconMap[feature.icon as keyof typeof iconMap] || TrendingUp
-  const colorClass = colorMap[feature.iconColor as keyof typeof colorMap] || colorMap.blue
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const Icon = iconMap[feature.icon as keyof typeof iconMap] || TrendingUp;
+  const colorClass =
+    colorMap[feature.iconColor as keyof typeof colorMap] || colorMap.blue;
 
   return (
     <motion.div
@@ -49,27 +50,35 @@ function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-800 hover:border-gray-700 transition-colors"
+      className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/5 hover:border-white/10 transition-colors"
     >
       <div className="flex items-start gap-4 mb-4">
-        <div className={`w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 ${colorClass}`}>
-          <Icon className="w-6 h-6" />
+        <div
+          className={`w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 ${colorClass}`}
+        >
+          <Icon className="w-5 h-5" />
         </div>
 
-        <h3 className="text-lg font-bold text-white leading-tight pt-1">{feature.title}</h3>
+        <h3 className="text-lg font-bold text-white leading-tight pt-1">
+          {feature.title}
+        </h3>
       </div>
 
       <p className="text-gray-400 leading-relaxed">{feature.description}</p>
     </motion.div>
-  )
+  );
 }
 
-export default function FeaturesSection({ features }: { features: FeaturesData }) {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+export default function FeaturesSection({
+  features,
+}: {
+  features: FeaturesData;
+}) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-20 bg-gradient-to-b from-surface-start to-features-end">
+    <section ref={ref} className="py-20 bg-[#242424] ">
       <div className="container mx-auto px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -78,10 +87,16 @@ export default function FeaturesSection({ features }: { features: FeaturesData }
           className="text-center mb-16"
         >
           {features.label && (
-            <p className="text-cyan-400 text-sm font-semibold tracking-wider uppercase mb-4">{features.label}</p>
+            <p className="text-[#f47b5e] text-sm font-semibold tracking-wider uppercase mb-4">
+              {features.label}
+            </p>
           )}
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">{features.title}</h2>
-          <p className="text-lg text-gray-400 max-w-3xl mx-auto">{features.subtitle}</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            {features.title}
+          </h2>
+          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+            {features.subtitle}
+          </p>
         </motion.div>
 
         {/* Grid Layout */}
@@ -92,5 +107,5 @@ export default function FeaturesSection({ features }: { features: FeaturesData }
         </div>
       </div>
     </section>
-  )
+  );
 }

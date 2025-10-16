@@ -72,15 +72,15 @@ export default function PricingSection({ pricing }: { pricing: PricingData }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`relative bg-card-bg rounded-2xl p-8 transition-all ${
+              className={`relative bg-blacker rounded-2xl p-8 transition-all ${
                 plan.highlighted
-                  ? "ring-2 ring-cyan-500 shadow-[0_0_30px_rgba(6,182,212,0.3)]"
-                  : "hover:bg-card-hover-bg"
+                  ? "ring-2 ring-[#f47b5e] shadow-[0_0_30px_rgba(244, 123, 94,0.3)]"
+                  : "hover:bg-whiter/2"
               }`}
             >
               {/* Popular Badge */}
               {plan.badge && (
-                <div className="absolute -top-3 right-6 bg-cyan-500 text-white px-4 py-1 rounded-full text-xs font-medium">
+                <div className="absolute -top-3 right-6 bg-[#f47b5e] text-white px-4 py-1 rounded-full text-xs font-medium">
                   {plan.badge}
                 </div>
               )}
@@ -108,15 +108,15 @@ export default function PricingSection({ pricing }: { pricing: PricingData }) {
                   return (
                     <li key={featureIndex} className="flex items-start gap-3">
                       <div
-                        className={`flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center ${
-                          plan.highlighted ? "bg-cyan-500/10" : "bg-gray-800"
+                        className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center ${
+                          plan.highlighted ? "bg-[#f47b5e]/5" : "bg-whiter/5"
                         }`}
                       >
                         {IconComponent && (
                           <IconComponent
                             className={`w-5 h-5 ${
                               plan.highlighted
-                                ? "text-cyan-400"
+                                ? "text-[#f47b5e]"
                                 : "text-gray-400"
                             }`}
                           />
@@ -134,8 +134,8 @@ export default function PricingSection({ pricing }: { pricing: PricingData }) {
               <Button
                 className={`w-full rounded-full font-medium transition-all ${
                   plan.highlighted
-                    ? "bg-cyan-500 hover:bg-cyan-600 text-white"
-                    : "bg-gray-800 hover:bg-gray-700 text-white"
+                    ? "bg-[#f47b5e] hover:bg-[#f47b5e]/80 text-white"
+                    : "bg-whiter/10 hover:bg-whiter/50 hover:text-blacker text-white"
                 }`}
               >
                 {plan.ctaText}

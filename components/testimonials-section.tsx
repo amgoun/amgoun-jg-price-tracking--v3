@@ -120,7 +120,7 @@ export default function TestimonialsSection({
                       delay: 0.5 + index * 0.15,
                       type: "spring",
                     }}
-                    className="text-5xl lg:text-6xl font-bold text-[#c6a2cc] "
+                    className="text-5xl lg:text-6xl font-bold text-[#faa41a] "
                   >
                     {stat.value}
                   </motion.div>

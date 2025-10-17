@@ -81,7 +81,7 @@ export default function CTASection({ cta }: CTASectionProps) {
               >
                 <Button
                   size="lg"
-                  className="bg-[#faa41a] hover:bg-[#faa41a]/80 text-white px-6 sm:px-8 lg:px-12 py-4 sm:py-5 lg:py-6 text-base sm:text-lg rounded-full font-semibold transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                  className="bg-[#faa41a] hover:bg-[#faa41a]/80 text-white px-6 sm:px-8 lg:px-12 py-4 sm:py-5 lg:py-6 text-base sm:text-lg rounded-full font-semibold transition-all duration-300 hover:scale-105"
                 >
                   {cta.buttonText}
                 </Button>

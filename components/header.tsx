@@ -33,7 +33,7 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[99999] isolate transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-[888] isolate transition-all duration-300 ${
         isScrolled ? "backdrop-blur-sm" : ""
       }`}
     >
@@ -73,7 +73,7 @@ export const Header = () => {
           {/* Right side: Login or MobileNav */}
           <div className="flex items-center gap-4">
             {/* Mobile burger menu - visible on mobile only */}
-            <div className="md:hidden">
+            <div className="md:hidden z-[999]">
               <MobileNav />
             </div>
 

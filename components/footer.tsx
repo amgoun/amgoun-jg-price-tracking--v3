@@ -91,7 +91,7 @@ export default function Footer({ footer }: FooterProps) {
 
           {/* Links Columns */}
           {footer.links.map((column, index) => (
-            <div key={index}>
+            <div key={index} className="text-center sm:text-left">
               <h3 className="text-lg font-semibold mb-4">{column.title}</h3>
               <ul className="space-y-3">
                 {column.items.map((item, itemIndex) => (

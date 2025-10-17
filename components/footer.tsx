@@ -44,7 +44,7 @@ const socialIcons = {
 
 export default function Footer({ footer }: FooterProps) {
   return (
-    <footer className="bg-[#070707] text-white">
+    <footer className="bg-[var(--color-footer-bg)] text-white">
       <div className="container mx-auto px-6 lg:px-12 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
@@ -76,13 +76,13 @@ export default function Footer({ footer }: FooterProps) {
                   placeholder={footer.newsletter.placeholder}
                   className="bg-white text-black border-0 flex-1"
                 />
-                <Button className="bg-[#f47b5e] hover:bg-[#f47b5e]/80 text-white px-6">
+                <Button className="bg-[var(--color-bluewish)] hover:bg-[color-mix(in_oklab,_var(--color-bluewish)_/_80%,_black)] text-white px-6">
                   {footer.newsletter.buttonText}
                 </Button>
               </div>
               <p className="text-gray-500 text-xs">
                 {footer.newsletter.disclaimer.split("Privacy Policy")[0]}
-                <Link href="#" className="underline hover:text-[#f47b5e]">
+                <Link href="#" className="underline hover:text-[var(--color-bluewish)]">
                   Privacy Policy
                 </Link>
               </p>
@@ -98,7 +98,7 @@ export default function Footer({ footer }: FooterProps) {
                   <li key={itemIndex}>
                     <Link
                       href={item.href}
-                      className="text-gray-400 hover:text-[#f47b5e] transition-colors text-sm"
+                    className="text-gray-400 hover:text-[var(--color-bluewish)] transition-colors text-sm"
                     >
                       {item.label}
                     </Link>
@@ -124,7 +124,7 @@ export default function Footer({ footer }: FooterProps) {
                   href={social.href}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-black hover:bg-[#f47b5e] hover:text-white transition-colors"
+                  className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-black hover:bg-[var(--color-bluewish)] hover:text-white transition-colors"
                 >
                   <Icon className="w-5 h-5" />
                 </motion.a>

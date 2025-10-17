@@ -78,7 +78,7 @@ export default function HeroSection({ data }: { data: HeroData }) {
               {[...Array(5)].map((_, i) => (
                 <Star
                   key={i}
-                  className="w-3 h-3 fill-[#faa41a] text-[#faa41a] "
+                  className="w-3 h-3 fill-[var(--color-accent)] text-[var(--color-accent)] "
                 />
               ))}
             </div>

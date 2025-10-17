@@ -34,7 +34,8 @@ const colorMap = {
   cyan: "bg-cyan-400/20 text-cyan-300",
   purple: "bg-violet-400/20 text-violet-300",
   green: "bg-emerald-400/20 text-emerald-300",
-  orange: "bg-[#f47b5e]/20 text-[#f47b5e]",
+  // Use RGB helper for reliable background with alpha across browsers
+  orange: "bg-[rgb(var(--color-bluewish-rgb)_/_20%)] text-[var(--color-bluewish)]",
 };
 
 function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
@@ -78,7 +79,7 @@ export default function FeaturesSection({
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-20 bg-[#242424] ">
+    <section ref={ref} className="py-20 bg-[var(--color-section-bg)] ">
       <div className="container mx-auto px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -87,7 +88,7 @@ export default function FeaturesSection({
           className="text-center mb-16"
         >
           {features.label && (
-            <p className="text-[#f47b5e] text-sm font-semibold tracking-wider uppercase mb-4">
+            <p className="text-[var(--color-bluewish)] text-sm font-semibold tracking-wider uppercase mb-4">
               {features.label}
             </p>
           )}

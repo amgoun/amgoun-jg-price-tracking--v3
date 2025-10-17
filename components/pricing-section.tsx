@@ -45,7 +45,7 @@ const iconMap = {
 
 export default function PricingSection({ pricing }: { pricing: PricingData }) {
   return (
-    <section className="py-20 px-6 lg:px-12 bg-[#242424]">
+    <section className="py-20 px-6 lg:px-12 bg-[var(--color-section-bg)]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -74,13 +74,13 @@ export default function PricingSection({ pricing }: { pricing: PricingData }) {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className={`relative bg-blacker rounded-2xl p-8 transition-all ${
                 plan.highlighted
-                  ? "ring-2 ring-[#f47b5e] shadow-[0_0_30px_rgba(244, 123, 94,0.3)]"
+                  ? "ring-2 ring-[var(--color-bluewish)] shadow-[0_0_30px_rgb(var(--color-bluewish-rgb)_/_30%)]"
                   : "hover:bg-whiter/2"
               }`}
             >
               {/* Popular Badge */}
               {plan.badge && (
-                <div className="absolute -top-3 right-6 bg-[#f47b5e] text-white px-4 py-1 rounded-full text-xs font-medium">
+                <div className="absolute -top-3 right-6 bg-[var(--color-bluewish)] text-white px-4 py-1 rounded-full text-xs font-medium">
                   {plan.badge}
                 </div>
               )}
@@ -109,14 +109,14 @@ export default function PricingSection({ pricing }: { pricing: PricingData }) {
                     <li key={featureIndex} className="flex items-start gap-3">
                       <div
                         className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center ${
-                          plan.highlighted ? "bg-[#f47b5e]/5" : "bg-whiter/5"
+                          plan.highlighted ? "bg-[color-mix(in_oklab,_var(--color-bluewish)_/_5%,_transparent)]" : "bg-whiter/5"
                         }`}
                       >
                         {IconComponent && (
                           <IconComponent
                             className={`w-5 h-5 ${
                               plan.highlighted
-                                ? "text-[#f47b5e]"
+                                ? "text-[var(--color-bluewish)]"
                                 : "text-gray-400"
                             }`}
                           />
@@ -134,7 +134,7 @@ export default function PricingSection({ pricing }: { pricing: PricingData }) {
               <Button
                 className={`w-full rounded-full font-medium transition-all ${
                   plan.highlighted
-                    ? "bg-[#f47b5e] hover:bg-[#f47b5e]/80 text-white"
+                    ? "bg-[var(--color-bluewish)] hover:bg-[color-mix(in_oklab,_var(--color-bluewish)_/_80%,_black)] text-white"
                     : "bg-whiter/10 hover:bg-whiter/50 hover:text-blacker text-white"
                 }`}
               >

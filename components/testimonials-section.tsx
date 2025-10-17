@@ -5,6 +5,10 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Star, TrendingUp } from "lucide-react";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 interface TestimonialsData {
   label: string;
@@ -44,7 +48,7 @@ export default function TestimonialsSection({
           transition={{ duration: 0.6 }}
           className="text-center mb-16 lg:mb-20"
         >
-          <div className="text-[#f47b5e] font-semibold text-sm tracking-wider uppercase mb-4">
+          <div className="text-[var(--color-bluewish)] font-semibold text-sm tracking-wider uppercase mb-4">
             {testimonials.label}
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 text-balance">
@@ -55,83 +59,127 @@ export default function TestimonialsSection({
           </p>
         </motion.div>
 
-        {/* Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 max-w-7xl mx-auto">
-          {/* Testimonial Card - Left */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-whiter/5 rounded-2xl p-8 lg:p-10 flex flex-col justify-between"
-          >
-            {/* Stars */}
-            <div className="flex gap-2 mb-6">
-              {[...Array(testimonials.testimonial.rating)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="w-6 h-6 fill-[#f47b5e] text-[#f47b5e]"
-                />
-              ))}
-            </div>
-
-            {/* Quote */}
-            <p className="text-white text-lg lg:text-xl leading-relaxed mb-8 flex-grow">
-              "{testimonials.testimonial.quote}"
-            </p>
-
-            {/* Author */}
-            <div className="flex items-center gap-4">
-              <Image
-                src="/avatar.png"
-                alt={testimonials.testimonial.author.name}
-                width={60}
-                height={60}
-                className="rounded-full"
-              />
-              <div>
-                <div className="text-white font-semibold text-lg">
-                  {testimonials.testimonial.author.name}
-                </div>
-                <div className="text-gray-400 text-sm">
-                  {testimonials.testimonial.author.title}
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Stats Cards - Right */}
-          <div className="flex flex-col gap-6 lg:gap-8">
-            {testimonials.stats.map((stat, index) => (
+        {/* Rotating testimonials */}
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          autoplay={{ delay: 3500, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          spaceBetween={24}
+          slidesPerView={1}
+          className="max-w-4xl mx-auto"
+        >
+          {[
+            {
+              rating: 5,
+              quote:
+                "Aimate has revolutionized our operations. The AI-driven support exceeds expectations and enhances efficiency.",
+              author: {
+                name: "John Doe",
+                title: "Managing Director",
+                image: "/avatar.png",
+                shop: { name: "Spherule", href: "#" },
+              },
+            },
+            {
+              rating: 5,
+              quote:
+                "We saw immediate uplift in conversion after automating price updates. Setup was quick and painless.",
+              author: {
+                name: "Amelia Hart",
+                title: "Head of Growth",
+                image: "/amelia_avatar.png",
+                shop: { name: "Nordico", href: "#" },
+              },
+            },
+            {
+              rating: 4,
+              quote:
+                "Clear insights and timely alerts helped us beat competitors without hurting margin.",
+              author: {
+                name: "Samir Khan",
+                title: "Ecommerce Lead",
+                image: "/samir_avatar.png",
+                shop: { name: "Trendlane", href: "#" },
+              },
+            },
+            {
+              rating: 5,
+              quote:
+                "Fantastic support and smart automation. Highly recommended for growing shops.",
+              author: {
+                name: "Lena Chen",
+                title: "Founder",
+                image: "/lena_avatar.png",
+                shop: { name: "Bright&Co", href: "#" },
+              },
+            },
+          ].map((item, index) => (
+            <SwiperSlide key={index}>
               <motion.div
-                key={index}
-                initial={{ opacity: 0, x: 50 }}
-                animate={
-                  isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }
-                }
-                transition={{ duration: 0.6, delay: 0.3 + index * 0.15 }}
-                className="bg-white/5 rounded-2xl p-8 lg:p-10 flex-1"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="bg-whiter/5 rounded-2xl p-8 lg:p-10"
               >
-                <div className="flex items-start gap-3 mb-4">
-                  <motion.div
-                    initial={{ scale: 0 }}
-                    animate={isInView ? { scale: 1 } : { scale: 0 }}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.5 + index * 0.15,
-                      type: "spring",
-                    }}
-                    className="text-5xl lg:text-6xl font-bold text-[#faa41a] "
-                  >
-                    {stat.value}
-                  </motion.div>
-                  {stat.trend === "up" && (
-                    <TrendingUp className="w-6 h-6 text-white mt-2" />
-                  )}
+                <div className="flex gap-2 mb-6">
+                  {Array.from({ length: item.rating }).map((_, i) => (
+                    <Star
+                      key={i}
+                      className="w-6 h-6 fill-[var(--color-bluewish)] text-[var(--color-bluewish)]"
+                    />
+                  ))}
                 </div>
-                <p className="text-white text-base lg:text-lg">{stat.label}</p>
+                <p className="text-white text-lg lg:text-xl leading-relaxed mb-8">
+                  "{item.quote}"
+                </p>
+                <div className="flex items-center gap-4">
+                  <Image
+                    src={item.author.image}
+                    alt={item.author.name}
+                    width={60}
+                    height={60}
+                    className="rounded-full"
+                  />
+                  <div>
+                    <div className="text-white font-semibold text-lg">
+                      {item.author.name}
+                    </div>
+                    <div className="text-gray-400 text-sm">
+                      {item.author.title} •{" "}
+                      <a
+                        href={item.author.shop.href}
+                        className="text-[var(--color-bluewish)] underline-offset-4 hover:underline"
+                      >
+                        {item.author.shop.name}
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
-            ))}
-          </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        {/* Stats under slider */}
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto mt-10 lg:mt-16">
+          {testimonials.stats.map((stat, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-white/5 rounded-2xl p-8 lg:p-10"
+            >
+              <div className="flex items-start gap-2 mb-2">
+                <div className="text-5xl lg:text-6xl font-bold text-[var(--color-accent)]">
+                  {stat.value}
+                </div>
+                <TrendingUp className="w-5 h-5 text-white mt-2" />
+              </div>
+              <div className="text-white text-base lg:text-lg">{stat.label}</div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

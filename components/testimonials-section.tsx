@@ -172,7 +172,7 @@ export default function TestimonialsSection({
               className="bg-white/5 rounded-2xl p-8 lg:p-10"
             >
               <div className="flex items-start gap-2 mb-2">
-                <div className="text-5xl lg:text-6xl font-bold text-[var(--color-accent)]">
+                <div className="text-5xl lg:text-6xl font-bold text-emerald-400">
                   {stat.value}
                 </div>
                 <TrendingUp className="w-5 h-5 text-white mt-2" />

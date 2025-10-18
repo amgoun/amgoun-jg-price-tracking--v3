@@ -15,11 +15,11 @@ export default function Home() {
       <div id="features">
         <FeaturesSection features={data.features} />
       </div>
-      <div id="testimonials">
-        <TestimonialsSection testimonials={data.testimonials} />
-      </div>
       <div id="pricing">
         <PricingSection pricing={data.pricing} />
+      </div>
+      <div id="testimonials">
+        <TestimonialsSection testimonials={data.testimonials} />
       </div>
       <CTASection cta={data.cta} />
       <Footer footer={data.footer} />

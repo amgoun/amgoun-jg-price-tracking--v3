@@ -28,7 +28,7 @@ export default function HeroSection({ data }: { data: HeroData }) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="text-5xl lg:text-6xl font-bold leading-tight mb-6 text-balance text-white"
+            className="text-5xl lg:text-6xl font-bold leading-tight mb-6 text-balance text-whiter"
           >
             Automated Price Monitoring That Saves You Time and Boosts{" "}
             <span className="bg-gradient-to-b from-bluewish to-bluewish/70 text-transparent bg-clip-text">
@@ -40,7 +40,7 @@ export default function HeroSection({ data }: { data: HeroData }) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="text-lg text-gray-300 mb-8 leading-relaxed"
+            className="text-lg text-whiter/80 mb-8 leading-relaxed"
           >
             {data.description}
           </motion.p>
@@ -61,7 +61,7 @@ export default function HeroSection({ data }: { data: HeroData }) {
             <Button
               size="lg"
               variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 bg-transparent rounded-full"
+              className="border-whiter/30 text-whiter hover:bg-whiter/10 bg-transparent rounded-full"
             >
               <Download className="w-4 h-4 mr-2" />
               {data.watchDemoText}
@@ -82,7 +82,7 @@ export default function HeroSection({ data }: { data: HeroData }) {
                 />
               ))}
             </div>
-            <span className="text-white/90">
+            <span className="text-whiter/90">
               Rated {data.rating.score}{" "}
               <span className="font-normal">{data.rating.text}</span>
             </span>

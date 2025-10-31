@@ -6,6 +6,7 @@ import MobileNav from "@/components/mobile-nav";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
 import Logo from "@/public/logo.svg";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const smoothScrollTo = (elementId: string) => {
   const element = document.getElementById(elementId);
@@ -45,25 +46,25 @@ export const Header = () => {
             onClick={() => router.push("/")}
           >
             <Image src={Logo} alt="logo" height={31} width={35} />
-            <p className="text-lg font-bold text-white">GJ Tracker</p>
+            <p className="text-lg font-bold text-[#242424] dark:text-whiter">GJ Tracker</p>
           </div>
 
           {/* Navigation Links - centered */}
           <nav className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 gap-6 items-center">
             <button
-              className="hover:hover-menu text-whiter transition-colors duration-200"
+              className="hover:hover-menu text-[#242424] dark:text-whiter transition-colors duration-200 font-medium"
               onClick={() => smoothScrollTo("features")}
             >
               Features
             </button>
             <button
-              className="hover:hover-menu text-whiter transition-colors duration-200"
+              className="hover:hover-menu text-[#242424] dark:text-whiter transition-colors duration-200 font-medium"
               onClick={() => smoothScrollTo("pricing")}
             >
               Pricing
             </button>
             <button
-              className="hover:hover-menu text-whiter transition-colors duration-200"
+              className="hover:hover-menu text-[#242424] dark:text-whiter transition-colors duration-200 font-medium"
               onClick={() => smoothScrollTo("testimonials")}
             >
               Testimonial
@@ -77,11 +78,11 @@ export const Header = () => {
               <MobileNav />
             </div>
 
-            {/* Login button - hidden on mobile */}
-
+            {/* Desktop: Theme toggle and Login button - hidden on mobile */}
             <div className="hidden md:flex gap-2 items-center">
+              <ThemeToggle />
               <Button
-                className="relative border-white/30 text-white hover:bg-white/10 bg-transparent rounded-full"
+                className="relative border-black/20 hover:bg-black/5 bg-transparent dark:border-white/30 dark:hover:bg-white/10 rounded-full font-medium text-[#242424] dark:text-whiter"
                 type="button"
                 variant="outline"
                 onClick={() => router.push("/sign-in")}

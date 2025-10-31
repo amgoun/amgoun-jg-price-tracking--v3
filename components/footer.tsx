@@ -44,7 +44,7 @@ const socialIcons = {
 
 export default function Footer({ footer }: FooterProps) {
   return (
-    <footer className="bg-[var(--color-footer-bg)] text-white">
+    <footer className="bg-[var(--color-footer-bg)] text-whiter">
       <div className="container mx-auto px-6 lg:px-12 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
@@ -59,15 +59,15 @@ export default function Footer({ footer }: FooterProps) {
                 height={32}
                 className="w-8 h-8"
               />
-              <span className="text-xl font-bold">{footer.brand.name}</span>
+              <span className="text-xl font-bold text-whiter">{footer.brand.name}</span>
             </div>
 
             {/* Newsletter */}
             <div>
-              <h3 className="text-lg font-semibold mb-3">
+              <h3 className="text-lg font-semibold text-whiter mb-3">
                 {footer.newsletter.title}
               </h3>
-              <p className="text-gray-400 text-sm mb-4">
+              <p className="text-whiter/70 text-sm mb-4">
                 {footer.newsletter.description}
               </p>
               <div className="flex gap-2 mb-3 max-w-md">
@@ -80,7 +80,7 @@ export default function Footer({ footer }: FooterProps) {
                   {footer.newsletter.buttonText}
                 </Button>
               </div>
-              <p className="text-gray-500 text-xs">
+              <p className="text-whiter/60 text-xs">
                 {footer.newsletter.disclaimer.split("Privacy Policy")[0]}
                 <Link href="#" className="underline hover:text-[var(--color-bluewish)]">
                   Privacy Policy
@@ -92,13 +92,13 @@ export default function Footer({ footer }: FooterProps) {
           {/* Links Columns */}
           {footer.links.map((column, index) => (
             <div key={index} className="text-center sm:text-left">
-              <h3 className="text-lg font-semibold mb-4">{column.title}</h3>
+              <h3 className="text-lg font-semibold text-whiter mb-4">{column.title}</h3>
               <ul className="space-y-3">
                 {column.items.map((item, itemIndex) => (
                   <li key={itemIndex}>
                     <Link
                       href={item.href}
-                    className="text-gray-400 hover:text-[var(--color-bluewish)] transition-colors text-sm"
+                    className="text-whiter/70 hover:text-[var(--color-bluewish)] transition-colors text-sm"
                     >
                       {item.label}
                     </Link>
@@ -110,9 +110,9 @@ export default function Footer({ footer }: FooterProps) {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="border-t border-whiter/20 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Copyright */}
-          <p className="text-gray-500 text-sm">{footer.copyright}</p>
+          <p className="text-whiter/60 text-sm">{footer.copyright}</p>
 
           {/* Social Icons */}
           <div className="flex gap-3">
@@ -124,7 +124,7 @@ export default function Footer({ footer }: FooterProps) {
                   href={social.href}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-black hover:bg-[var(--color-bluewish)] hover:text-white transition-colors"
+                  className="w-10 h-10 bg-whiter/10 dark:bg-white rounded-full flex items-center justify-center text-whiter dark:text-black hover:bg-[var(--color-bluewish)] hover:text-white transition-colors"
                 >
                   <Icon className="w-5 h-5" />
                 </motion.a>

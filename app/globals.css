@@ -2,17 +2,29 @@
 @import "tw-animate-css";
 
 :root {
-  /* Base palette */
-  --color-blacker: #1d1d1d;
-  --color-whiter: #f4f4f4;
-  --color-bluewish: #667eea ;  /*  #667eea  #f47b5e primary brand */
+  /* Light theme (default) */
+  --color-blacker: #f4f4f4; /* light background */
+  --color-whiter: #1d1d1d; /* dark text */
+  --color-bluewish: #667eea;  /*  #667eea  #f47b5e primary brand */
   --color-accent: #faa41a; /* secondary accent */
 
   /* RGB helpers for utilities that need alpha (e.g. box-shadow) */
   --color-bluewish-rgb: 102 126 234;
   /* Semantic brand/surface tokens (used) */
+  --color-section-bg: #ffffff; /* light section background */
+  --color-footer-bg: #f8f8f8; /* light footer background */
+}
+
+.dark {
+  /* Dark theme */
+  --color-blacker: #1d1d1d; /* dark background */
+  --color-whiter: #f4f4f4; /* light text */
+  --color-bluewish: #667eea;
+  --color-accent: #faa41a;
+
+  --color-bluewish-rgb: 102 126 234;
   --color-section-bg: #242424; /* generic dark section background */
-  --color-footer-bg: #070707; /* footer background */
+  --color-footer-bg: #070707; /* dark footer background */
 }
 
 @theme inline {

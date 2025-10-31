@@ -51,10 +51,10 @@ export default function TestimonialsSection({
           <div className="text-[var(--color-bluewish)] font-semibold text-sm tracking-wider uppercase mb-4">
             {testimonials.label}
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 text-balance">
+          <h2 className="text-4xl lg:text-5xl font-bold text-whiter mb-4 text-balance">
             {testimonials.title}
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-whiter/70 max-w-2xl mx-auto">
             {testimonials.subtitle}
           </p>
         </motion.div>
@@ -130,7 +130,7 @@ export default function TestimonialsSection({
                     />
                   ))}
                 </div>
-                <p className="text-white text-lg lg:text-xl leading-relaxed mb-8">
+                <p className="text-whiter text-lg lg:text-xl leading-relaxed mb-8">
                   "{item.quote}"
                 </p>
                 <div className="flex items-center gap-4">
@@ -142,10 +142,10 @@ export default function TestimonialsSection({
                     className="rounded-full"
                   />
                   <div>
-                    <div className="text-white font-semibold text-lg">
+                    <div className="text-whiter font-semibold text-lg">
                       {item.author.name}
                     </div>
-                    <div className="text-gray-400 text-sm">
+                    <div className="text-whiter/70 text-sm">
                       {item.author.title} •{" "}
                       <a
                         href={item.author.shop.href}
@@ -169,15 +169,15 @@ export default function TestimonialsSection({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white/5 rounded-2xl p-8 lg:p-10"
+              className="bg-whiter/5 rounded-2xl p-8 lg:p-10"
             >
               <div className="flex items-start gap-2 mb-2">
-                <div className="text-5xl lg:text-6xl font-bold text-emerald-400">
+                <div className="text-5xl lg:text-6xl font-bold text-emerald-500 dark:text-emerald-400">
                   {stat.value}
                 </div>
-                <TrendingUp className="w-5 h-5 text-white mt-2" />
+                <TrendingUp className="w-5 h-5 text-whiter mt-2" />
               </div>
-              <div className="text-white text-base lg:text-lg">{stat.label}</div>
+              <div className="text-whiter text-base lg:text-lg">{stat.label}</div>
             </motion.div>
           ))}
         </div>

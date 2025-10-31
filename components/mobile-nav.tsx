@@ -6,7 +6,8 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
 import { DialogTitle } from "./ui/dialog";
-import Logo from "@/public/logo.svg"
+import Logo from "@/public/logo.svg";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const smoothScrollTo = (elementId: string) => {
   const element = document.getElementById(elementId);
@@ -37,12 +38,14 @@ export const menu = [
 const MobileNav = () => {
   const router = useRouter();
   return (
-    <Sheet>
-      <SheetTrigger className="flex items-center">
-        <Menu className=" flex size-5 text-whiter  md:hidden " />
-      <DialogTitle></DialogTitle>
-      </SheetTrigger>
-      <SheetContent>
+    <div className="flex items-center gap-2 md:hidden">
+      <ThemeToggle />
+      <Sheet>
+        <SheetTrigger className="flex items-center">
+          <Menu className="flex size-5 text-[#242424] dark:text-whiter" />
+          <DialogTitle></DialogTitle>
+        </SheetTrigger>
+        <SheetContent>
         <div className="mb-40 mt-32 flex items-center justify-center">
           <Link href="/">
             <Image
@@ -57,7 +60,7 @@ const MobileNav = () => {
           {menu.map((item, index) => (
             <button 
               key={index} 
-              className="capitalize pb-2 hover:hover-menu text-whiter transition-colors duration-200"
+              className="capitalize pb-2 hover:hover-menu text-[#242424] dark:text-whiter transition-colors duration-200 font-medium"
               onClick={() => {
                 if (item.id) {
                   smoothScrollTo(item.id);
@@ -68,7 +71,7 @@ const MobileNav = () => {
             </button>
           ))}
           <Button
-                className="rounded-full px-6 bg-whiter text-blacker text-md hover:bg-white/70 transition-all"
+                className="rounded-full px-6 bg-whiter text-blacker text-md hover:bg-white/70 transition-all dark:bg-whiter dark:text-blacker"
                 type="button"
                 onClick={() => router.push("/sign-in")}
               >
@@ -76,7 +79,8 @@ const MobileNav = () => {
             </Button>
         </nav>
       </SheetContent>
-    </Sheet>
+      </Sheet>
+    </div>
   );
 };
 

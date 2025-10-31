@@ -30,10 +30,10 @@ const iconMap = {
 };
 
 const colorMap = {
-  blue: "bg-blue-400/20 text-blue-300",
-  cyan: "bg-cyan-400/20 text-cyan-300",
-  purple: "bg-violet-400/20 text-violet-300",
-  green: "bg-emerald-400/20 text-emerald-300",
+  blue: "bg-blue-500/20 text-blue-600 dark:bg-blue-400/20 dark:text-blue-300",
+  cyan: "bg-cyan-500/20 text-cyan-600 dark:bg-cyan-400/20 dark:text-cyan-300",
+  purple: "bg-violet-500/20 text-violet-600 dark:bg-violet-400/20 dark:text-violet-300",
+  green: "bg-emerald-500/20 text-emerald-600 dark:bg-emerald-400/20 dark:text-emerald-300",
   // Use RGB helper for reliable background with alpha across browsers
   orange: "bg-[rgb(var(--color-bluewish-rgb)_/_20%)] text-[var(--color-bluewish)]",
 };
@@ -51,7 +51,7 @@ function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/5 hover:border-white/10 transition-colors"
+      className="bg-whiter/5 backdrop-blur-sm rounded-xl p-8 border border-whiter/5 hover:border-whiter/10 transition-colors"
     >
       <div className="flex items-start gap-4 mb-4">
         <div
@@ -60,12 +60,12 @@ function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
           <Icon className="w-5 h-5" />
         </div>
 
-        <h3 className="text-lg font-bold text-white leading-tight pt-1">
+        <h3 className="text-lg font-bold text-whiter leading-tight pt-1">
           {feature.title}
         </h3>
       </div>
 
-      <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+      <p className="text-whiter/70 leading-relaxed">{feature.description}</p>
     </motion.div>
   );
 }
@@ -92,10 +92,10 @@ export default function FeaturesSection({
               {features.label}
             </p>
           )}
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-whiter mb-4">
             {features.title}
           </h2>
-          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+          <p className="text-lg text-whiter/70 max-w-3xl mx-auto">
             {features.subtitle}
           </p>
         </motion.div>

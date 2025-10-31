@@ -55,10 +55,10 @@ export default function PricingSection({ pricing }: { pricing: PricingData }) {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold text-whiter mb-4">
             {pricing.title}
           </h2>
-          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+          <p className="text-lg text-whiter/70 max-w-3xl mx-auto">
             {pricing.subtitle}
           </p>
         </motion.div>
@@ -87,14 +87,14 @@ export default function PricingSection({ pricing }: { pricing: PricingData }) {
 
               {/* Plan Name */}
               <div className="mb-6">
-                <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">
+                <h3 className="text-xs font-semibold text-whiter/70 uppercase tracking-wider mb-4">
                   {plan.name}
                 </h3>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-5xl font-bold text-white">
+                  <span className="text-5xl font-bold text-whiter">
                     {plan.price}
                   </span>
-                  <span className="text-gray-400 text-sm ml-1">
+                  <span className="text-whiter/70 text-sm ml-1">
                     {plan.period}
                   </span>
                 </div>
@@ -117,12 +117,12 @@ export default function PricingSection({ pricing }: { pricing: PricingData }) {
                             className={`w-5 h-5 ${
                               plan.highlighted
                                 ? "text-[var(--color-bluewish)]"
-                                : "text-gray-400"
+                                : "text-whiter/70"
                             }`}
                           />
                         )}
                       </div>
-                      <span className="text-gray-300 text-sm leading-relaxed pt-2">
+                      <span className="text-whiter/80 text-sm leading-relaxed pt-2">
                         {feature.text}
                       </span>
                     </li>
@@ -135,7 +135,7 @@ export default function PricingSection({ pricing }: { pricing: PricingData }) {
                 className={`w-full rounded-full font-medium transition-all ${
                   plan.highlighted
                     ? "bg-[var(--color-bluewish)] hover:bg-[color-mix(in_oklab,_var(--color-bluewish)_/_80%,_black)] text-white"
-                    : "bg-whiter/10 hover:bg-whiter/50 hover:text-blacker text-white"
+                    : "bg-whiter/10 hover:bg-whiter/50 hover:text-blacker text-whiter"
                 }`}
               >
                 {plan.ctaText}

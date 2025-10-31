@@ -57,7 +57,7 @@ export default function CTASection({ cta }: CTASectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 text-balance"
+                className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-whiter mb-6 text-balance"
               >
                 {cta.title}
               </motion.h2>
@@ -67,7 +67,7 @@ export default function CTASection({ cta }: CTASectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-base sm:text-lg lg:text-xl text-gray-300 mb-8 text-balance"
+                className="text-base sm:text-lg lg:text-xl text-whiter/80 mb-8 text-balance"
               >
                 {cta.description}
               </motion.p>
@@ -86,7 +86,7 @@ export default function CTASection({ cta }: CTASectionProps) {
                   {cta.buttonText}
                 </Button>
 
-                <p className="text-xs sm:text-sm text-gray-400 text-center lg:text-left">{cta.disclaimer}</p>
+                <p className="text-xs sm:text-sm text-whiter/70 text-center lg:text-left">{cta.disclaimer}</p>
               </motion.div>
             </motion.div>
           </div>

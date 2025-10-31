@@ -81,7 +81,7 @@ export default function CTASection({ cta }: CTASectionProps) {
               >
                 <Button
                   size="lg"
-                  className="bg-[var(--color-bluewish)] hover:bg-[color-mix(in_oklab,_var(--color-bluewish)_/_80%,_black)] text-white px-6 sm:px-8 lg:px-12 py-4 sm:py-5 lg:py-6 text-base sm:text-lg rounded-full font-semibold transition-all duration-300 hover:scale-105"
+                  className="bg-[var(--color-bluewish)] hover:bg-[color-mix(in_oklab,_var(--color-bluewish)_/_80%,_black)] text-whiter px-6 sm:px-8 lg:px-12 py-4 sm:py-5 lg:py-6 text-base sm:text-lg rounded-full font-semibold transition-all duration-300 hover:scale-105"
                 >
                   {cta.buttonText}
                 </Button>

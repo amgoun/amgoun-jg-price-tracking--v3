@@ -134,7 +134,7 @@ export default function PricingSection({ pricing }: { pricing: PricingData }) {
               <Button
                 className={`w-full rounded-full font-medium transition-all ${
                   plan.highlighted
-                    ? "bg-[var(--color-bluewish)] hover:bg-[color-mix(in_oklab,_var(--color-bluewish)_/_80%,_black)] text-white"
+                    ? "bg-[var(--color-bluewish)] hover:bg-[color-mix(in_oklab,_var(--color-bluewish)_/_80%,_black)] text-whiter"
                     : "bg-whiter/10 hover:bg-whiter/50 hover:text-blacker text-whiter"
                 }`}
               >

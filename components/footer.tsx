@@ -76,7 +76,7 @@ export default function Footer({ footer }: FooterProps) {
                   placeholder={footer.newsletter.placeholder}
                   className="bg-white text-black border-0 flex-1"
                 />
-                <Button className="bg-[var(--color-bluewish)] hover:bg-[color-mix(in_oklab,_var(--color-bluewish)_/_80%,_black)] text-white px-6">
+                <Button className="bg-[var(--color-bluewish)] hover:bg-[color-mix(in_oklab,_var(--color-bluewish)_/_80%,_black)] text-whiter px-6">
                   {footer.newsletter.buttonText}
                 </Button>
               </div>

@@ -4,8 +4,11 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Download, Rocket, Star } from "lucide-react";
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 import Logo from "@/public/logo.svg";
 import Hero from "@/public/hero-v3.png";
+import HeroLight from "@/public/hero-light.png";
 
 interface HeroData {
   title: string;
@@ -19,6 +22,13 @@ interface HeroData {
 }
 
 export default function HeroSection({ data }: { data: HeroData }) {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <div className="container mx-auto px-6 lg:px-12 py-16 lg:py-24">
       <div className="grid lg:grid-cols-2 lg:gap-16 gap-8 items-center">
@@ -111,7 +121,7 @@ export default function HeroSection({ data }: { data: HeroData }) {
               className="relative z-10 w-full "
             >
               <Image
-                src={Hero}
+                src={mounted && theme === "light" ? HeroLight : Hero}
                 alt="Competitors pricing monitoring"
                 width={900}
                 height={700}

@@ -36,7 +36,7 @@ export default function CTASection({ cta }: CTASectionProps) {
               className="flex justify-center order-2 lg:order-1"
             >
               <Image
-                src="/cta.svg"
+                src="/cta.png"
                 alt="CTA illustration"
                 width={500}
                 height={400}

@@ -6,7 +6,9 @@ import MobileNav from "@/components/mobile-nav";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
 import Logo from "@/public/logo.svg";
+import LogoLight from "@/public/logo-light.svg";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { useTheme } from "next-themes";
 
 const smoothScrollTo = (elementId: string) => {
   const element = document.getElementById(elementId);
@@ -21,6 +23,12 @@ const smoothScrollTo = (elementId: string) => {
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,7 +53,12 @@ export const Header = () => {
             className="flex-shrink-0 flex items-center gap-2 cursor-pointer"
             onClick={() => router.push("/")}
           >
-            <Image src={Logo} alt="logo" height={31} width={35} />
+            <Image 
+              src={mounted && theme === "light" ? LogoLight : Logo} 
+              alt="logo" 
+              height={31} 
+              width={35} 
+            />
             <p className="text-lg font-bold text-[#242424] dark:text-whiter">GJ Tracker</p>
           </div>
 

@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import Logo from "@/public/logo.svg";
 import Hero from "@/public/hero-v3.png";
-import HeroLight from "@/public/hero-light.png";
+import HeroLight from "@/public/hero-light-2.png";
 
 interface HeroData {
   title: string;
